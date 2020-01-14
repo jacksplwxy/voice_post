@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>朋友圈语音</title>
+  <script>
+    (function (doc, win) {
+      var docEl = doc.documentElement,
+        isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+        dpr = isIOS ? Math.min(win.devicePixelRatio, 3) : 1,
+        dpr = window.top === window.self ? dpr : 1, //被iframe引用时，禁止缩放
+        dpr = 1,
+        scale = 1 / dpr,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+      docEl.dataset.dpr = dpr;
+      var metaEl = doc.createElement('meta');
+      metaEl.name = 'viewport';
+      metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
+      docEl.firstElementChild.appendChild(metaEl);
+      var recalc = function () {
+        var width = docEl.clientWidth;
+        if (width / dpr > 750) {
+          width = 750 * dpr;
+        }
+        // 乘以100，px : rem = 100 : 1
+        docEl.style.fontSize = 100 * (width / 750) + 'px';
+      };
+      recalc()
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+    })(document, window);
+  </script>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but voice_post doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <script src="https://cdn.bootcss.com/vue/2.6.6/vue.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+  <script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue-resource/1.5.1/vue-resource.min.js"></script>
+  <script src="https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue-lazyload/1.2.6/vue-lazyload.js"></script>
+  <!-- <script src="https://unpkg.com/cube-ui/lib/cube.min.js"></script> -->
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+  <script>
+    //百度统计
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?113a3c11043be53ec01e53025c5a4c70";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+</body>
+
+</html>
