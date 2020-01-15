@@ -6,10 +6,10 @@ vue-cli3 + vue-core + vue-router + vuex + cube-ui +  微信网页sdk
 
 ## 软件截图：
 <div align="center">
-<img src="readme/1.gif"  height="400" width="250">
-<img src="readme/2.gif"  height="400" width="250">
-<img src="readme/2.png"  height="400" width="250">
-<img src="readme/3.png"  height="400" width="250">
+<img src="readme/1.gif"  height="500" width="320">
+<img src="readme/2.gif"  height="500" width="320">
+<img src="readme/2.png"  height="500" width="320">
+<img src="readme/3.png"  height="500" width="320">
 </div>
 
 ## 项目特点：
