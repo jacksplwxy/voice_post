@@ -1,34 +1,21 @@
 # voice_post
+语音朋友圈，一款通过音频的形式在朋友圈传播的vue单页应用
 
-## Project setup
-```
-npm install
-```
+## 技术栈：
+vue-cli3 + vue-core + vue-router + vuex + cube-ui +  微信网页sdk
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## 软件截图：
+<div align="center">
+<img src="readme/1.png"  height="400" width="250" >
+<img src="readme/2.png"  height="400" width="250">
+<img src="readme/3.png"  height="400" width="250">
+<img src="readme/4.png"  height="400" width="250">
+</div>
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## 项目特点：
+* 使用了weixin-js-sdk进行授权获取用户头像等信息
+* 能够录制音频
+* 音频能够在朋友圈和微信群中进行传播
 
-### Run your tests
-```
-npm run test
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
